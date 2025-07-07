@@ -1,0 +1,6 @@
+package com.land.procedoc_auth.domain.entities;
+
+public enum FormaDocumento {
+    ESCREVER,
+    ANEXAR
+}
