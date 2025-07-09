@@ -5,12 +5,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.UUID;
+
 @Getter
 @Setter
 @Entity
 public class Department {
     @Id @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    private UUID id;
 
     private String nome;
 

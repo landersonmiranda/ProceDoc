@@ -7,21 +7,22 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
+
 @Getter
 @Setter
 @Entity
 @Table(name = "process")
-
 public class Process {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    private UUID id;
 
     //transformar em enum dps
-    private String Assunto;
-    private String AssuntoDetalhado;
+    private String assunto;
+    private String assuntoDetalhado;
 
-    private String Observacao;
+    private String observacao;
 
     @Enumerated(EnumType.STRING)
     private NaturezaProcesso naturezaDoProcesso;
@@ -34,5 +35,7 @@ public class Process {
 
     @OneToMany(mappedBy = "processo")
     private List<Document> documentos;
+
+
 
 }
